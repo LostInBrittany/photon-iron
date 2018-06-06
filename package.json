@@ -1,0 +1,23 @@
+{
+  "name": "photon-iron",
+  "description": "A set of visual and non-visual utility elements for dealing with Warp 10",
+  "main": "photon-iron.js",
+  "homepage": "https://github.com/LostInBrittany/photon-iron",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LostInBrittany/photon-iron"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@photon-elements/photon-tools": "^1.0.3",
+    "@polymer/iron-ajax": "^3.0.0-pre.19",
+    "@polymer/polymer": "^3.0.0",
+    "big.js": "^5.1.2"
+  },
+  "devDependencies": {
+    "@polymer/iron-demo-helpers": "^3.0.0-pre.19",
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "wct-browser-legacy": "^1.0.0"
+  },
+  "version": "1.0.0"
+}
