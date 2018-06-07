@@ -40,6 +40,14 @@ class PhotonWarpscriptCaller extends window.customElements.get('iron-ajax') {
       },
 
       /**
+       * If true, parse response using looseJSON
+       */
+      parseResponse: {
+        type: Boolean,
+        value: false,
+      },
+
+      /**
        * If true debug logs are sent to the console
        */
       debug: {
@@ -123,7 +131,7 @@ class PhotonWarpscriptCaller extends window.customElements.get('iron-ajax') {
     let operations = this._getOperations(request, allowedHeaders);
 
     try {
-      let stack = looseJSON.parse(request.response);
+      let stack = this.parseResponse ? looseJSON.parse(request.response) : request.response;
       let response = {
         stack: stack,
         options: {

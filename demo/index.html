@@ -13,6 +13,7 @@
       import '@polymer/iron-demo-helpers/demo-snippet';
     </script>
 
+
     <script type="module" src="../photon-warpscript-caller.js"></script>
 
     <custom-style>
@@ -28,6 +29,31 @@
           <photon-warpscript-caller 
               url="https://warp10.gra1.metrics.ovh.net/api/v0/exec"
               warpscript="NOW"
+              reload="5"
+              auto
+              debug></photon-warpscript-caller>
+        </template>
+      </demo-snippet>
+    </div>
+    <div class="vertical-section-container centered">
+      <h3>photon-iron demo with C3</h3>
+      <demo-snippet>
+        <template>
+          <photon-warpscript-caller 
+              url="https://warp10.gra1.metrics.ovh.net/api/v0/exec"
+              warpscript="
+              0 9 
+              <%
+                TOSTRING 'i' STORE
+                NEWGTS 
+                'photon.sample.timeseries' RENAME 
+                { 'a' $i } RELABEL
+                0 19 
+                <% 
+                    NOW SWAP d - NaN NaN NaN RAND 1000 * TOLONG ADDVALUE
+                %> FOR
+              %> FOR
+              "
               reload="5"
               auto
               debug></photon-warpscript-caller>
