@@ -183,13 +183,13 @@ class PhotonWarpscriptCaller extends window.customElements.get('iron-ajax') {
    */
   _handleError(request, error) {
 
-    let allowedHeaders = this._getAllowedHeaders(error.request);
-    error.elapsed = this._getElapsed(error.request, allowedHeaders);
-    error.fetched = this._getFetched(error.request, allowedHeaders);
-    error.operations = this._getOperations(error.request, allowedHeaders);
+    let allowedHeaders = this._getAllowedHeaders(request);
+    error.elapsed = this._getElapsed(request, allowedHeaders);
+    error.fetched = this._getFetched(request, allowedHeaders);
+    error.operations = this._getOperations(request, allowedHeaders);
 
-    error.errorLine = this._getErrorLine(error.request, allowedHeaders);
-    error.errorMsg = this._getErrorMsg(error.request, allowedHeaders);
+    error.errorLine = this._getErrorLine(request, allowedHeaders);
+    error.errorMsg = this._getErrorMsg(request, allowedHeaders);
 
     if (this.verbose) {
       Base._error(error);

@@ -9,7 +9,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@photon-elements/photon-tools": "^1.2.2",
+    "@photon-elements/photon-tools": "^1.2.3",
     "@polymer/iron-ajax": "^3.0.0-pre.19",
     "@polymer/polymer": "^3.0.0",
     "big.js": "^5.1.2"
@@ -19,5 +19,5 @@
     "@webcomponents/webcomponentsjs": "^2.0.0",
     "wct-browser-legacy": "^1.0.0"
   },
-  "version": "1.1.0"
+  "version": "1.1.2"
 }
